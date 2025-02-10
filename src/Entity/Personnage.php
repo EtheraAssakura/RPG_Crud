@@ -23,6 +23,12 @@ class Personnage
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
 
+    #[ORM\Column]
+    private ?int $pv = null;
+
+    #[ORM\Column]
+    private ?int $xp = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +66,30 @@ class Personnage
     public function setUser(?User $user): static
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getPv(): ?int
+    {
+        return $this->pv;
+    }
+
+    public function setPv(int $pv): static
+    {
+        $this->pv = $pv;
+
+        return $this;
+    }
+
+    public function getXp(): ?int
+    {
+        return $this->xp;
+    }
+
+    public function setXp(?int $xp): static
+    {
+        $this->xp = $xp;
 
         return $this;
     }
