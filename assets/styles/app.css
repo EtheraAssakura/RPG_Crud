@@ -1,0 +1,7 @@
+body {
+    background-color: skyblue;
+}
+
+.col {
+    column-width: 6rem;
+}
